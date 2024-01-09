@@ -7,3 +7,5 @@ Agregar funcionalidades y cosas estilos javascript react.
 Quizás que sea react js.
 Acomodar que al enviar el formulario envie a mi email
 Acomodar el fondo de blanco a oscuro para evitar al recargar
+--Acomodar el top de contactame en telefono
+Acomodar la letra en telefono... se ve rara
