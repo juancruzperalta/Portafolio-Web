@@ -6,3 +6,4 @@ Acomodar la parte de proyectos para teléfonos
 Agregar funcionalidades y cosas estilos javascript react.
 Quizás que sea react js.
 Acomodar que al enviar el formulario envie a mi email
+Acomodar el fondo de blanco a oscuro para evitar al recargar
