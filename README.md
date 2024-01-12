@@ -9,3 +9,5 @@ Acomodar que al enviar el formulario envie a mi email
 Acomodar el fondo de blanco a oscuro para evitar al recargar
 --Acomodar el top de contactame en telefono
 Acomodar la letra en telefono... se ve rara
+btn descargar mi cv
+--oclutar barra al bajar scroll

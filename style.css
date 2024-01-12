@@ -1,9 +1,9 @@
 /* Custom Properties */
 :root {
-  --first-color: hsl(288, 83%, 28%);
+  --first-color: #d5294d;
   --text-first-color: rgb(255, 255, 255);
   --second-color: rgb(156, 149, 149);
-  --text-second-color: rgb(255, 255, 255);
+  --text-second-color: #f27a8a;
 
   --font: "Instrument Serif", serif, "Montserrat Alternates",
     sans-serif. "Vollkorn", serif;
@@ -25,10 +25,8 @@ body {
   overflow-x: hidden;
   color: var(--text-first-color);
   font-family: var(--font);
-  background: url("assets/imageFondo.jpg") no-repeat center fixed;
-  background-size: cover;
   min-height: 100vh;
-  background-color: #000000;
+  background-color: #0e141b;
 }
 /* Modificaciones en barra lateral */
 body::-webkit-scrollbar {
@@ -39,7 +37,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body::-webkit-scrollbar-track {
-  background-color: rgb(0, 0, 0);
+  background-color: #0e141b;
 }
 
 *,
@@ -75,29 +73,8 @@ body::-webkit-scrollbar-track {
   font-weight: 700;
   font-size: 7vh;
   line-height: 1;
-  background: linear-gradient(
-    to right,
-    rgb(15, 0, 102),
-    rgb(189, 2, 214),
-    rgb(255, 0, 0)
-  );
-  background-size: 250%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradient 7s ease-out infinite;
+  color: rgb(240, 233, 233);
   margin: 0;
-}
-@keyframes gradient {
-  0% {
-    background-position: 0 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0 50%;
-  }
 }
 
 /* Iconos principal hero*/
@@ -121,7 +98,51 @@ body::-webkit-scrollbar-track {
 }
 .hero-icons-social svg:hover {
   transform: scale(1.17);
-  fill: rgb(219, 216, 216);
+  fill: var(--text-second-color);
+}
+
+/* Lineas movimiento */
+.night {
+  position: absolute;
+  width: 50%;
+  height: 20%;
+}
+.star {
+  position: absolute;
+  left: 22%;
+  top: calc(100% + 24px);
+  height: 4px;
+  width: 500px;
+  background: linear-gradient(-45deg, #729fff, rgba(0, 0, 255, 0));
+  border-radius: 999px;
+  animation: tail 6s ease-out infinite;
+}
+@keyframes tail {
+  0% {
+    width: 0px;
+  }
+  30% {
+    width: 420px;
+  }
+  100% {
+    width: 0;
+  }
+}
+.star:nth-child(1) {
+  top: calc(50% - 25px);
+  left: calc(50% - 290px);
+  animation: tail2 6s ease-out infinite;
+}
+@keyframes tail2 {
+  0% {
+    width: 0px;
+  }
+  30% {
+    width: 600px;
+  }
+  100% {
+    width: 0;
+  }
 }
 
 /* subprefij desarr front mobile */
@@ -146,32 +167,23 @@ body::-webkit-scrollbar-track {
   flex-direction: row;
 }
 .sub-prefij > li {
-  color: var(--text-first-color);
+  color: var(--text-second-color);
   list-style: none;
 }
 .front-subtitle {
   font-size: 4vh;
   line-height: 1rem;
-  color: var(--text-first-color);
+  color: var(--text-second-color);
   font-weight: 800;
   margin: 0;
   padding: 0.3rem;
-  background: -webkit-linear-gradient(
-    -45deg,
-    #6b6969,
-    #ffffff,
-    #ffffff,
-    #6b6969
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 /* Menu */
 .header {
   position: sticky;
   top: 0;
-  background-color: #030303;
+  background: #0e141bcb;
 }
 
 /* menu headers */
@@ -229,7 +241,7 @@ body::-webkit-scrollbar-track {
   line-height: 2rem;
   font-weight: 700;
   color: #f8faff;
-  background-color: var(--first-color);
+  background-color: var(--text-second-color);
   text-decoration: none;
   justify-content: center;
   align-items: center;
@@ -240,8 +252,10 @@ body::-webkit-scrollbar-track {
 }
 
 .btn:hover {
-  transform: scale(1.1);
-  background-color: var(--first-color);
+  background-color: var(--text-second-color);
+
+  opacity: 0.75;
+  transform: scale(1.04);
 }
 .btn svg {
   filter: rgb(0, 0, 0);
@@ -255,12 +269,12 @@ body::-webkit-scrollbar-track {
   flex-wrap: wrap;
 }
 .section-skills {
-  padding: 1rem 1rem;
-  margin-bottom: 0.5rem;
+  padding: 1rem 0.8rem;
+  margin-bottom: 0.4rem;
   margin-right: 0.6rem;
-  font-size: 1rem;
+  font-size: 1.05rem;
   max-width: 500px;
-  background: rgb(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.644);
   border-radius: 5px;
   font-weight: 600;
   color: #000000;
@@ -268,6 +282,7 @@ body::-webkit-scrollbar-track {
 }
 .section-skills:hover {
   transform: scale(1.12);
+  box-shadow: 0 2px 4px 0 var(--text-second-color);
 }
 
 /* Utilities */
@@ -341,7 +356,8 @@ body::-webkit-scrollbar-track {
 
 .titulares {
   font-size: 5vh;
-  margin: 1rem 0.5rem;
+
+  margin-top: 4rem;
 }
 .footer {
   text-align: center;
@@ -367,7 +383,7 @@ body::-webkit-scrollbar-track {
   margin: 0.5rem;
 }
 .footer-icons-social svg:hover {
-  fill: rgb(219, 216, 216);
+  fill: var(--text-second-color);
 }
 .footer-icons-social li {
   list-style: none;
@@ -377,9 +393,9 @@ body::-webkit-scrollbar-track {
   width: 2.8rem;
   height: 2.8rem;
   padding: 0.25rem;
-  fill: hsla(288, 83%, 28%, 0.829);
+  fill: var(--text-second-color);
   margin-right: 0.5rem;
-  margin-bottom: -0.55rem;
+  margin-bottom: 0rem;
   background-color: #f2f2f40e;
   border-radius: 0.5rem;
 }
@@ -396,6 +412,7 @@ body::-webkit-scrollbar-track {
 .contact-cards {
   background-color: #6b696936;
   border-radius: 1rem;
+  margin-top: 3.5rem;
 }
 .contact-small {
   font-size: 1.1rem;
@@ -415,8 +432,7 @@ body::-webkit-scrollbar-track {
   padding: 1rem;
   background: -webkit-linear-gradient(
     -45deg,
-    hsl(288, 83%, 28%),
-    #ffffff,
+    var(--text-second-color),
     #ffffff
   );
   -webkit-background-clip: text;
@@ -451,7 +467,7 @@ body::-webkit-scrollbar-track {
   cursor: pointer;
   transition: all 0.5s ease-out;
   width: 100%;
-  background-color: var(--first-color);
+  background-color: var(--text-second-color);
   font-size: 1.5rem;
 }
 .contact-form input[type="submit"]:hover {
@@ -466,15 +482,15 @@ body::-webkit-scrollbar-track {
 }
 .proyectos {
   position: relative;
-  height: 24rem;
-  margin-top: 2.5rem;
+  height: 21rem;
+  margin-top: 2rem;
 }
 
 .project-image {
   width: 55%;
   height: 100%;
   border-radius: 0.5rem;
-  border: 2px solid #6b6969;
+  border: 2px solid #c4c2c2;
   position: absolute;
   right: 0;
 }
@@ -486,13 +502,14 @@ body::-webkit-scrollbar-track {
   margin-top: 1rem;
 }
 .project-p-exter {
-  background-color: hsl(288, 83%, 28%);
+  background-color: #0e141bea;
+  border-radius: 1rem;
   width: 50%;
-  height: 7rem;
-  font-size: 1.15rem;
+  height: 8rem;
+  font-size: 1.17rem;
+  border: 2px solid #838383;
+  box-shadow: 0 4px 12px 0 #838383;
   padding: 1rem;
-  box-shadow: 0 5px 10px 0 hsl(300, 3%, 12%);
-  border-radius: 0.43rem;
 }
 .project-p-inter {
   font-size: 1.15rem;
@@ -503,7 +520,7 @@ body::-webkit-scrollbar-track {
   padding: 0;
 }
 .project-p-inter li {
-  background-color: #6b696981;
+  background-color: #3d3c3cd5;
   padding: 0.4rem;
   margin-left: 0.7rem;
   border-radius: 0.35rem;
@@ -513,17 +530,20 @@ body::-webkit-scrollbar-track {
   position: absolute;
   right: 0.5rem;
   margin: 0;
-  top: 12.5rem;
+  top: 11rem;
   width: 3rem;
   height: 3rem;
-  fill: wheat;
+  fill: var(--text-second-color);
 }
 .project-section svg:hover {
-  fill: rgba(245, 222, 179, 0.829);
+  fill: var(--first-color);
 }
-.titulares {
-  padding-top: 5.5rem;
-  text-align: center;
+.proyect-h1 {
+  font-size: 2rem;
+  margin-left: 2rem;
+  margin-top: 4rem;
+  border-bottom: 1px solid #f7aab2;
+  width: 17.5%;
 }
 @media screen and (min-width: 768px) {
   .section {
@@ -565,8 +585,8 @@ body::-webkit-scrollbar-track {
     padding: 2.5rem;
   }
   .section-skills {
-    margin-bottom: 1.5rem;
-    margin-right: 1rem;
+    margin-bottom: 0.9rem;
+    margin-right: 0.8rem;
     padding: 1rem 1.5rem;
   }
   .contact-form input,
@@ -599,7 +619,7 @@ body::-webkit-scrollbar-track {
     padding-right: 0;
   }
   .menu a:hover {
-    border-bottom: 1px solid rgb(255, 255, 255);
+    border-bottom: 1px solid #f7aab2;
   }
   .about {
     display: grid;
