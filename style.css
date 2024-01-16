@@ -102,49 +102,10 @@ body::-webkit-scrollbar-track {
 }
 
 /* Lineas movimiento */
-.night {
-  position: absolute;
-  width: 50%;
-  height: 20%;
-}
+.night,
 .star {
-  position: absolute;
-  left: 22%;
-  top: calc(100% + 24px);
-  height: 4px;
-  width: 500px;
-  background: linear-gradient(-45deg, #729fff, rgba(0, 0, 255, 0));
-  border-radius: 999px;
-  animation: tail 6s ease-out infinite;
+  display: none;
 }
-@keyframes tail {
-  0% {
-    width: 0px;
-  }
-  30% {
-    width: 420px;
-  }
-  100% {
-    width: 0;
-  }
-}
-.star:nth-child(1) {
-  top: calc(50% - 25px);
-  left: calc(50% - 290px);
-  animation: tail2 6s ease-out infinite;
-}
-@keyframes tail2 {
-  0% {
-    width: 0px;
-  }
-  30% {
-    width: 600px;
-  }
-  100% {
-    width: 0;
-  }
-}
-
 /* subprefij desarr front mobile */
 .hero-sub-prefij {
   opacity: 1;
@@ -172,18 +133,27 @@ body::-webkit-scrollbar-track {
 }
 .front-subtitle {
   font-size: 4vh;
-  line-height: 1rem;
+  line-height: 1.35rem;
   color: var(--text-second-color);
   font-weight: 800;
-  margin: 0;
+  margin: 0rem;
   padding: 0.3rem;
+  animation: tail4 5s ease infinite;
+}
+@keyframes tail4 {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 250px;
+  }
 }
 
 /* Menu */
 .header {
   position: sticky;
   top: 0;
-  background: #0e141bcb;
+  background: #0e141b;
 }
 
 /* menu headers */
@@ -205,13 +175,12 @@ body::-webkit-scrollbar-track {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s ease;
-  background-color: #030303;
+  background-color: #0e141b;
 }
 .menu li {
   text-decoration: none;
   list-style: none;
   padding: 1.5rem 2.5rem;
-  /* width: 100%; */
   border-top: 0.4px solid #969191;
 }
 .menu.is-active {
@@ -232,7 +201,7 @@ body::-webkit-scrollbar-track {
 /* btn */
 
 .btn {
-  width: 10.5rem;
+  width: 11rem;
   height: 3.5rem;
   border-radius: 0.4rem;
   margin: 8px;
@@ -475,64 +444,58 @@ body::-webkit-scrollbar-track {
   transform: scale(1.04);
 }
 
-/* Projectos */
-.projects {
-  padding: 0rem 2.3rem;
-  min-height: 100vh;
-}
-.proyectos {
-  position: relative;
-  height: 21rem;
-  margin-top: 2rem;
-}
-
 .project-image {
-  width: 55%;
-  height: 100%;
+  width: 100%;
+  height: auto;
   border-radius: 0.5rem;
   border: 2px solid #c4c2c2;
-  position: absolute;
-  right: 0;
+  border-bottom: 0;
 }
-
 .project-section {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  margin-top: 1rem;
+  margin: 1rem;
+  display: grid;
+  justify-items: center;
 }
 .project-p-exter {
-  background-color: #0e141bea;
-  border-radius: 1rem;
-  width: 50%;
-  height: 8rem;
-  font-size: 1.17rem;
-  border: 2px solid #838383;
-  box-shadow: 0 4px 12px 0 #838383;
-  padding: 1rem;
+  position: relative;
+  background-color: #0e141bf8;
+  border-radius: 0.25rem;
+  width: 100%;
+  height: 7rem;
+  font-size: 1rem;
+  box-shadow: 0 4px 4px 0 #83838396;
+  border: 2px solid #c4c2c2;
+  border-top: 0;
+  padding: 0.7rem;
+  margin-bottom: 3rem;
+  display: grid;
+  justify-self: left;
+  top: -0.5rem;
+  left: 0;
 }
 .project-p-inter {
+  position: relative;
+  display: flex;
   font-size: 1.15rem;
-  position: absolute;
   list-style: none;
-  top: 100%;
+  bottom: 100%;
+  justify-self: baseline;
   margin: 0;
   padding: 0;
 }
 .project-p-inter li {
   background-color: #3d3c3cd5;
   padding: 0.4rem;
-  margin-left: 0.7rem;
+  margin-right: 0.5rem;
   border-radius: 0.35rem;
+  height: 2.5rem;
 }
 .project-section svg {
   display: flex;
-  position: absolute;
-  right: 0.5rem;
+  position: relative;
   margin: 0;
-  top: 11rem;
-  width: 3rem;
-  height: 3rem;
+  width: 1.5rem;
+  height: 1.5rem;
   fill: var(--text-second-color);
 }
 .project-section svg:hover {
@@ -543,7 +506,7 @@ body::-webkit-scrollbar-track {
   margin-left: 2rem;
   margin-top: 4rem;
   border-bottom: 1px solid #f7aab2;
-  width: 17.5%;
+  width: 65%;
 }
 @media screen and (min-width: 768px) {
   .section {
@@ -576,8 +539,9 @@ body::-webkit-scrollbar-track {
     color: var(--text-first-color);
   }
   .menu li {
-    padding: 0.25rem;
+    padding: 1.25rem 2.8rem;
     border: 0;
+    border-top: 0.4px solid #969191;
   }
   .about > article,
   .portfolio,
@@ -592,6 +556,70 @@ body::-webkit-scrollbar-track {
   .contact-form input,
   .contact-form textarea {
     width: 97%;
+  }
+  .projects-gen {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .projects-gen {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 0.5rem 2.3rem;
+  }
+  .project-p-exter {
+    font-size: 3vh;
+    padding: 0.5rem;
+    top: -1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .proyect-h1 {
+    width: 27%;
+  }
+  /* estrellas */
+  .night {
+    position: absolute;
+    width: 40%;
+    height: 20%;
+    display: flex;
+  }
+  .star {
+    display: flex;
+    position: absolute;
+    left: 10%;
+    top: calc(100%);
+    height: 4px;
+    width: 200px;
+    background: linear-gradient(-45deg, #729fff, rgba(0, 0, 255, 0));
+    border-radius: 999px;
+    animation: tail 6s ease-out infinite;
+  }
+  @keyframes tail {
+    0% {
+      width: 0px;
+    }
+    30% {
+      width: 260px;
+    }
+    100% {
+      width: 0;
+    }
+  }
+  .star:nth-child(1) {
+    top: calc(50% - 25px);
+    left: calc(50% - 175px);
+    animation: tail2 6s ease-out infinite;
+  }
+  @keyframes tail2 {
+    0% {
+      width: 0px;
+    }
+    30% {
+      width: 360px;
+    }
+    100% {
+      width: 0;
+    }
   }
 }
 @media screen and (min-width: 1024px) {
@@ -611,6 +639,10 @@ body::-webkit-scrollbar-track {
 
     flex-direction: row;
     pointer-events: auto;
+  }
+  .menu li {
+    padding: 0.25rem;
+    border: 0;
   }
   .menu a {
     padding: 0 0.7rem;
@@ -662,5 +694,45 @@ body::-webkit-scrollbar-track {
   .contact {
     display: grid;
     align-content: center;
+  }
+  .star {
+    top: calc(100% + 28px);
+    left: calc(50% - 190px);
+    animation: tail 6s ease-out infinite;
+  }
+  /* estrellas */
+  @keyframes tail {
+    0% {
+      width: 0px;
+    }
+    30% {
+      width: 365px;
+    }
+    100% {
+      width: 0;
+    }
+  }
+  .star:nth-child(1) {
+    top: calc(50% - 24px);
+    left: calc(50% - 265px);
+    animation: tail2 6s ease-out infinite;
+  }
+  @keyframes tail2 {
+    0% {
+      width: 0px;
+    }
+    30% {
+      width: 560px;
+    }
+    100% {
+      width: 0;
+    }
+  }
+  /* proyectos */
+  .project-p-exter {
+    font-size: 3.2vh;
+  }
+  .proyect-h1 {
+    width: 18%;
   }
 }
