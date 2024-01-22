@@ -71,7 +71,7 @@ body::-webkit-scrollbar-track {
 
 .hero-image-title {
   font-weight: 700;
-  font-size: 7vh;
+  font-size: 2.8rem;
   line-height: 1;
   color: rgb(240, 233, 233);
   margin: 0;
@@ -92,8 +92,8 @@ body::-webkit-scrollbar-track {
 }
 .hero-icons-social svg {
   fill: var(--text-first-color);
-  width: 7vh;
-  height: 7vh;
+  width: 3rem;
+  height: 3rem;
   transition: transform 0.3s ease-in-out;
 }
 .hero-icons-social svg:hover {
@@ -101,11 +101,6 @@ body::-webkit-scrollbar-track {
   fill: var(--text-second-color);
 }
 
-/* Lineas movimiento */
-.night,
-.star {
-  display: none;
-}
 /* subprefij desarr front mobile */
 .hero-sub-prefij {
   opacity: 1;
@@ -148,7 +143,6 @@ body::-webkit-scrollbar-track {
     width: 250px;
   }
 }
-
 /* Menu */
 .header {
   position: sticky;
@@ -165,6 +159,7 @@ body::-webkit-scrollbar-track {
   border-radius: 0.15rem;
 }
 .menu {
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.6);
   position: absolute;
   top: 100%;
   width: 100%;
@@ -178,18 +173,22 @@ body::-webkit-scrollbar-track {
   background-color: #0e141b;
 }
 .menu li {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
   text-decoration: none;
   list-style: none;
+  border-top: 1px solid #eee;
+  text-align: right;
   padding: 1.5rem 2.5rem;
-  border-top: 0.4px solid #969191;
+  padding-right: 0.5rem;
 }
 .menu.is-active {
   opacity: 1;
   pointer-events: auto;
 }
 .menu a {
-  font-size: 1.4rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 700;
   text-align: center;
   text-decoration: none;
   color: var(--text-first-color);
@@ -371,7 +370,7 @@ body::-webkit-scrollbar-track {
 .contact-card a {
   text-decoration: none;
   color: var(--text-first-color);
-  padding-right: 0.5rem;
+  padding-right: 0;
 }
 .contact-card {
   width: 100%;
@@ -389,15 +388,13 @@ body::-webkit-scrollbar-track {
   margin: 0.5rem;
 }
 .contact-p {
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 1.1rem;
   padding: 0.5rem;
   margin: 0;
 }
 
 .contact-title {
   font-size: 2.2rem;
-  border-radius: 0.5rem;
   padding: 1rem;
   background: -webkit-linear-gradient(
     -45deg,
@@ -406,7 +403,6 @@ body::-webkit-scrollbar-track {
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin: 0;
 }
 /* Contact */
 .contact-form input,
@@ -520,7 +516,7 @@ body::-webkit-scrollbar-track {
     margin-top: 2rem;
   }
   .hero-image-title {
-    font-size: 13vh;
+    font-size: 6rem;
   }
   .hero-icons-social {
     flex-direction: column;
@@ -533,6 +529,9 @@ body::-webkit-scrollbar-track {
   .hero-sub-prefij {
     display: none;
     pointer-events: none;
+  }
+  .menu {
+    box-shadow: none;
   }
   .menu a {
     color: var(--text-first-color);
@@ -560,66 +559,17 @@ body::-webkit-scrollbar-track {
   .projects-gen {
     display: grid;
     grid-template-columns: 1fr 1fr;
-  }
-  .projects-gen {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    padding: 0.5rem 2.3rem;
+    padding: 0.5rem 0rem;
   }
   .project-p-exter {
-    font-size: 3vh;
+    font-size: 1rem;
     padding: 0.5rem;
     top: -1.5rem;
     margin-bottom: 1.5rem;
   }
   .proyect-h1 {
-    width: 27%;
-  }
-  /* estrellas */
-  .night {
-    position: absolute;
     width: 40%;
-    height: 25%;
-    display: flex;
-  }
-  .star {
-    display: flex;
-    position: absolute;
-    left: 10%;
-    top: calc(100%);
-    height: 4px;
-    width: 200px;
-    background: linear-gradient(-45deg, #729fff, rgba(0, 0, 255, 0));
-    border-radius: 999px;
-    animation: tail 6s ease-out infinite;
-  }
-  @keyframes tail {
-    0% {
-      width: 0px;
-    }
-    30% {
-      width: 260px;
-    }
-    100% {
-      width: 0;
-    }
-  }
-  .star:nth-child(1) {
-    top: calc(50% - 25px);
-    left: calc(50% - 175px);
-    animation: tail2 6s ease-out infinite;
-  }
-  @keyframes tail2 {
-    0% {
-      width: 0px;
-    }
-    30% {
-      width: 360px;
-    }
-    100% {
-      width: 0;
-    }
   }
 }
 @media screen and (min-width: 1024px) {
@@ -684,7 +634,7 @@ body::-webkit-scrollbar-track {
     grid-column: span 2;
   }
   .hero-image-title {
-    font-size: 18vh;
+    font-size: 7rem;
   }
   .hero-icons-social {
     bottom: auto;
@@ -701,42 +651,9 @@ body::-webkit-scrollbar-track {
     display: grid;
     align-content: center;
   }
-  .star {
-    top: calc(100% + 28px);
-    left: calc(50% - 190px);
-    animation: tail 6s ease-out infinite;
-  }
-  /* estrellas */
-  @keyframes tail {
-    0% {
-      width: 0px;
-    }
-    30% {
-      width: 365px;
-    }
-    100% {
-      width: 0;
-    }
-  }
-  .star:nth-child(1) {
-    top: calc(50% - 24px);
-    left: calc(50% - 265px);
-    animation: tail2 6s ease-out infinite;
-  }
-  @keyframes tail2 {
-    0% {
-      width: 0px;
-    }
-    30% {
-      width: 560px;
-    }
-    100% {
-      width: 0;
-    }
-  }
   /* proyectos */
   .project-p-exter {
-    font-size: 3.2vh;
+    font-size: 1.3rem;
   }
   .proyect-h1 {
     width: 18%;
