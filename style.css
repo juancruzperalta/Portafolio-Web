@@ -460,8 +460,8 @@ body::-webkit-scrollbar-track {
   background-color: #0e141bf8;
   border-radius: 0.25rem;
   width: 100%;
-  height: 7rem;
-  font-size: 1rem;
+  height: 8rem;
+  font-size: 1.02rem;
   box-shadow: 0 4px 4px 0 #83838396;
   border: 2px solid #c4c2c2;
   border-top: 0;
