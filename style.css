@@ -321,6 +321,9 @@ body::-webkit-scrollbar-track {
 .contact {
   padding-top: 3.2rem;
 }
+.section {
+  border-top: 2.5px solid #d5d3dba1;
+}
 
 .titulares {
   font-size: 5vh;
@@ -546,6 +549,13 @@ body::-webkit-scrollbar-track {
   .contact {
     padding: 1.8rem;
   }
+  .section,
+  .hero-image-opacity {
+    padding: 1rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
   .section-skills {
     font-size: 1.5rem;
     margin-bottom: 0.7rem;
@@ -656,6 +666,6 @@ body::-webkit-scrollbar-track {
     font-size: 1.3rem;
   }
   .proyect-h1 {
-    width: 18%;
+    width: 22%;
   }
 }
