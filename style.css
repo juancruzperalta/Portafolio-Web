@@ -5,6 +5,7 @@
   --second-color: rgb(156, 149, 149);
   --text-second-color: #f27a8a;
   --black-alpha-color: #00000017;
+  --black-opacity-color: #6b696936;
 
   --font: "Instrument Serif", serif, "Montserrat Alternates",
     sans-serif. "Vollkorn", serif;
@@ -55,8 +56,8 @@ body::-webkit-scrollbar-track {
   text-align: center;
 }
 .hero-subtitle {
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
   color: #dbd6d7;
   font-weight: 600;
   margin: 0;
@@ -75,13 +76,11 @@ body::-webkit-scrollbar-track {
 .hero-image-title {
   position: relative;
   font-weight: 700;
-  font-size: 1rem;
-  line-height: 5rem;
+  font-size: 3.3rem;
+  line-height: 2.6rem;
   margin: 0;
   background-image: radial-gradient(
-    circle at 50% -20.71%,
-    #ffb629 0,
-    #ffa537 10%,
+    circle at 50% 17.44%,
     #ff9243 20%,
     #ff7e4b 30%,
     #ff6951 40%,
@@ -117,7 +116,8 @@ body::-webkit-scrollbar-track {
   bottom: 1rem;
   padding: 0.5rem;
   margin: 0;
-  background-color: transparent;
+  border-radius: 0.5rem;
+  background-color: #0e141b;
 }
 .hero-icons-social > li {
   list-style: none;
@@ -133,52 +133,6 @@ body::-webkit-scrollbar-track {
   fill: var(--text-second-color);
 }
 
-/* subprefij desarr front mobile 
-.hero-sub-prefij {
-  opacity: 1;
-  pointer-events: auto;
-  font-size: 1.71rem;
-  line-height: 3rem;
-  color: var(--text-second-color);
-  font-weight: 600;
-  margin: 0;
-  padding: 0.4rem;
-}
-.sub-prefij {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-  bottom: auto;
-  left: 0.2rem;
-  padding: 0.5rem;
-  margin: 0;
-}
-.sub-prefij > li {
-  color: #f27a8a;
-  list-style: none;
-}
-.front-subtitle {
-  font-size: 4vh;
-  line-height: 100%;
-  color: var(--text-second-color);
-  font-weight: 800;
-  margin: 0rem;
-  padding: 0.3rem;
-  animation: tail4 5s ease infinite;
-}
-@keyframes tail4 {
-  0% {
-    width: 25%;
-  }
-
-  50% {
-    width: 80%;
-  }
-  100% {
-    width: 35%;
-  }
-}
-*/
 /* Menu */
 .header {
   position: sticky;
@@ -269,6 +223,7 @@ body::-webkit-scrollbar-track {
 }
 /* Skills */
 .skills {
+  padding: 0 0.8rem 0.8rem;
   display: flex;
   flex-wrap: wrap;
 }
@@ -281,7 +236,7 @@ body::-webkit-scrollbar-track {
   background: #d5d3db;
   font-weight: 600;
   color: black;
-  border-left: 7px solid #f27a8a;
+  border-left: 7px solid var(--text-second-color);
   transition: transform 0.3s ease-in-out;
 }
 .section-skills:hover {
@@ -291,7 +246,11 @@ body::-webkit-scrollbar-track {
 
 /* Utilities */
 .section-subtitle {
-  font-size: 1.2rem;
+  padding: 1rem;
+  font-size: 1.3rem;
+}
+.btn-descarga-cv {
+  padding: 0 1rem 1rem;
 }
 
 .container {
@@ -304,8 +263,9 @@ body::-webkit-scrollbar-track {
   padding: 1rem 1rem;
 }
 .section > article {
-  background-color: #6b696936;
+  background-color: var(--black-opacity-color);
   border-radius: 1rem;
+  margin-top: 1rem;
 }
 
 .none {
@@ -366,6 +326,7 @@ body::-webkit-scrollbar-track {
 }
 
 .titulares {
+  padding-left: 1rem;
   font-size: 5vh;
 }
 .footer {
@@ -419,7 +380,7 @@ body::-webkit-scrollbar-track {
   margin-bottom: 1.5rem;
 }
 .contact-cards {
-  background-color: #6b696936;
+  background-color: var(--black-opacity-color);
   border-radius: 1rem;
   margin-top: 3.5rem;
 }
@@ -542,7 +503,7 @@ body::-webkit-scrollbar-track {
   font-size: 2rem;
   margin-left: 2rem;
   margin-top: 5.5rem;
-  border-bottom: 1px solid #f7aab2;
+  border-bottom: 1px solid var(--text-second-color);
   width: 65%;
 }
 @media screen and (min-width: 768px) {
@@ -556,19 +517,16 @@ body::-webkit-scrollbar-track {
     font-size: 1.45rem;
   }
   .hero-image-title {
-    font-size: 3rem;
+    line-height: 4.7rem;
+    font-size: 5rem;
+  }
+  .hero-subtitle {
+    font-size: 1.2rem;
   }
   .hero-icons-social {
+    bottom: auto;
     flex-direction: column;
-    right: 0.5rem;
-  }
-  .sub-prefij {
-    opacity: 1;
-    pointer-events: auto;
-  }
-  .hero-sub-prefij {
-    display: none;
-    pointer-events: none;
+    left: 0.2rem;
   }
   .menu {
     box-shadow: none;
@@ -648,7 +606,7 @@ body::-webkit-scrollbar-track {
     padding-right: 0;
   }
   .menu a:hover {
-    border-bottom: 1px solid #f7aab2;
+    border-bottom: 1px solid var(--text-second-color);
   }
   .about {
     display: grid;
