@@ -11,3 +11,6 @@ Acomodar el fondo de blanco a oscuro para evitar al recargar
 Acomodar la letra en telefono... se ve rara
 btn descargar mi cv
 --oclutar barra al bajar scroll
+
+version 2.5
+-- cambie lo que vendria siendo el fondo y coloes..esta de nuevo en proeceso
